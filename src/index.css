@@ -8,6 +8,7 @@ body {
     --sb-track-color: #0d1438;
     --sb-thumb-color: #DE365A;
     --sb-size: 8px;
+    font-family: 'League Spartan';
   }
   
   body::-webkit-scrollbar {

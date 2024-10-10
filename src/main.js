@@ -1,3 +1,4 @@
+// main.js
 import './index.css'
 
 import { createApp } from 'vue'

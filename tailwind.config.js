@@ -11,6 +11,7 @@ export default {
         'primary': '#BB936A',
         'secondary': '#324654',
         'white': "#ffffff",
+        "pink": "#EB2952",
         // يمكنك إضافة المزيد من الألوان هنا
       },
       fontFamily: {
@@ -24,7 +25,19 @@ export default {
       borderRadius: {
         '4xl': '2rem',
       },
-      // إضافة أي امتدادات أخرى هنا
+      // إضافة امتدادات للأنيميشن والتدرج اللوني
+      backgroundSize: {
+        '200%': '200%', // لتوسيع حجم الخلفية
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+        },
+      },
+      animation: {
+        'gradient': 'gradient 5s ease infinite', // تعريف الحركة المخصصة
+      },
     },
   },
   plugins: [
