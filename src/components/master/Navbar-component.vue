@@ -15,17 +15,23 @@
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex text-white space-x-8 lg:space-x-16">
           <a href="#" class="flex items-center uppercase hover:text-gray-300">
-            Home <font-awesome-icon :icon="['fas', 'house']" class="ml-2" />
+            <h2>Home</h2>    
+            <font-awesome-icon  :icon="['fas', 'house']" class="ml-2 md:hidden sm:block" />
           </a>
           <a href="#" class="flex items-center uppercase hover:text-gray-300">
-            Services <font-awesome-icon :icon="['fas', 'gears']" class="ml-2" />
+            <h2>Services</h2> 
+            <font-awesome-icon :icon="['fas', 'gears']" class="ml-2 md:hidden sm:block" />
           </a>
-          <a href="#" class="text-xl uppercase hover:text-gray-300">About Us</a>
-          <a href="#" class="flex items-center uppercase hover:text-gray-300">
-            Our Work <font-awesome-icon :icon="['fas', 'network-wired']" class="ml-2" />
+          <a href="#" class="text-xl uppercase hover:text-gray-300">
+            <h2>About Us</h2> 
           </a>
           <a href="#" class="flex items-center uppercase hover:text-gray-300">
-            Blog <font-awesome-icon :icon="['fas', 'cubes-stacked']" class="ml-2" />
+            <h2>Our Work</h2>
+            <font-awesome-icon :icon="['fas', 'network-wired']" class="ml-2 md:hidden sm:block" />
+          </a>
+          <a href="#" class="flex items-center uppercase hover:text-gray-300">
+            <h2>Blog</h2>
+            <font-awesome-icon :icon="['fas', 'cubes-stacked']" class="ml-2 md:hidden sm:block" />
           </a>
         </div>
 
@@ -66,31 +72,36 @@
       <div class="flex flex-col justify-between h-full px-4 pt-6 pb-8 space-y-4">
         
         <!-- Navigation Links -->
-        <div class="space-y-6 flex flex-col items-center justify-center text-center gap-1">
-          <a href="#" @click="closeMobileMenu" class="flex justify-between text-center items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['fas', 'house']" /> 
-            <p>Home</p>
+        <div class="space-y-6 flex flex-col items-start justify-center text-center gap-1">
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>Home</h2>
+            <font-awesome-icon :icon="['fas', 'house']" />
           </a>
-          <a href="#" @click="closeMobileMenu" class="flex items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['fas', 'gears']" /> Services
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>Services</h2>
+            <font-awesome-icon :icon="['fas', 'gears']" />
           </a>
-          <a href="#" @click="closeMobileMenu" class="flex items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['far', 'address-card']" /> About Us
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>About Us</h2>
+            <font-awesome-icon :icon="['far', 'address-card']" />
           </a>
-          <a href="#" @click="closeMobileMenu" class="flex items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['fas', 'network-wired']" /> Our Work
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>Our Work</h2>
+            <font-awesome-icon :icon="['fas', 'network-wired']" />
           </a>
-          <a href="#" @click="closeMobileMenu" class="flex items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['fas', 'cubes-stacked']" /> Blog
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>Blog</h2>
+            <font-awesome-icon :icon="['fas', 'cubes-stacked']" />
           </a>
-          <a href="#" @click="closeMobileMenu" class="flex items-center text-white py-2 uppercase hover:text-gray-300">
-            <font-awesome-icon :icon="['far', 'comment-dots']" /> Contact Us
+          <a href="#" @click="closeMobileMenu" class="flex justify-between items-center w-full text-white py-2 uppercase hover:text-gray-300">
+            <h2>Contact Us</h2>
+            <font-awesome-icon :icon="['far', 'comment-dots']" />
           </a>
         </div>
 
         <!-- Social Media Links -->
         <div class="border-t border-gray-600 pt-4">
-          <div class="flex space-x-4">
+          <div class="flex space-x-8 justify-center">
             <a href="#" class="text-white hover:text-gray-300">
               <font-awesome-icon :icon="['fab', 'facebook-f']" />
             </a>
@@ -107,6 +118,7 @@
         </div>
       </div>
     </div>
+    
   </nav>
 </template>
 
@@ -145,7 +157,8 @@ const navClasses = computed(() => {
     {
       'bg-[#4C0024]/50 backdrop-blur-md': hasScrolled.value && !isMobileMenuOpen.value,
       'bg-transparent': !hasScrolled.value && !isMobileMenuOpen.value,
-      'bg-[#4C0024]': isMobileMenuOpen.value, // لون الخلفية الثابت عند فتح القائمة على الموبايل
+      // الخلفية المتدرجة المتحركة عند فتح القائمة
+      // 'animated-gradient': isMobileMenuOpen.value,
     },
   ];
 });
@@ -153,7 +166,7 @@ const navClasses = computed(() => {
 // حساب الصفوف الخاصة بقائمة الموبايل بناءً على حالة الفتح
 const mobileMenuClasses = computed(() => {
   return [
-    'md:hidden fixed top-0 right-0 h-full w-64 z-40 bg-[#4C0024] transform transition-transform duration-300 ease-in-out',
+    'md:hidden fixed top-0 right-0 h-full w-64 z-40 transform transition-transform duration-300 ease-in-out animated-gradient',
     {
       'translate-x-0': isMobileMenuOpen.value,
       'translate-x-full': !isMobileMenuOpen.value,
@@ -208,4 +221,24 @@ nav {
 nav .md:hidden button {
   transition: color 0.3s ease;
 }
+
+/* تعريف الأنيميشن للتدرج */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(45deg, #EB2952, #0D1438, #69CDFF);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
 </style>
