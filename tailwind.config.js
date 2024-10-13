@@ -15,8 +15,7 @@ export default {
         // يمكنك إضافة المزيد من الألوان هنا
       },
       fontFamily: {
-        'spartan': ['"League Spartan"', 'sans-serif'],
-        // يمكنك إضافة المزيد من عائلات الخطوط هنا
+        'league': ['"League Spartan"', 'sans-serif'],
       },
       spacing: {
         '8xl': '96rem',

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,8 +8,10 @@ body {
     --sb-track-color: #0d1438;
     --sb-thumb-color: #DE365A;
     --sb-size: 8px;
-    font-family: 'League Spartan';
+    font-family: 'League Spartan', sans-serif; /* تطبيق الخط على الجسم */
   }
+
+ 
   
   body::-webkit-scrollbar {
     width: var(--sb-size)

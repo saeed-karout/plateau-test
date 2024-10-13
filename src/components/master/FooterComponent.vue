@@ -53,7 +53,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="bg-red-500 p-2 ml-2 text-white">
+            <button type="submit" class="bg-red-500 p-1 w-8 ml-2 text-white">
               <font-awesome-icon :icon="['far', 'paper-plane']" />
             </button>
           </form>
@@ -69,7 +69,7 @@
   <!-- Copyright -->
   <p class="text-sm text-gray-500">
     &copy; Copyrights 2024
-    <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB2952] to-[#0D1438]">PLATEAU</span>
+    <span class="text-xl font-bold bg-clip-text  text-pink ">PLATEAU</span>
     . All rights reserved.
   </p>
 
@@ -77,14 +77,14 @@
   <span class="flex gap-1 text-sm text-gray-500 dark:text-gray-300">
     Powered by
     <a href="https://www.instagram.com/snc.ltd?igsh=ODEwODVmeXhwdGh6" target="_blank"
-        class="gradient-text flex items-center">
+        class="gradient-text text-gradient-to-r from-[#EB2952] to-[#0D1438] flex items-center">
         Plateau
         <img src="/src/assets/logo.svg" width="22px" alt="">
     </a>
   </span>
 
   <!-- Social Media Links -->
-  <div class="space-x-4 text-xs text-red-500">
+  <div class="space-x-4 text-xs text-pink">
     <a href="#" class="hover:text-gray-400">Facebook</a>
     <a href="#" class="hover:text-gray-400">Whatsapp</a>
     <a href="#" class="hover:text-gray-400">Instagram</a>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url('/src/assets/bg/bg-pin.png')]">
+  <div class="bg-[url('/src/assets/bg/bg-pin.png')]  z-50">
     <div class="relative flex justify-center items-center h-[300px] w-full bg-transparent overflow-hidden">
       <!-- Carousel content -->
       <div class="absolute flex w-full transition-transform duration-500" :style="{ transform: `translateX(-${activeIndex * 100}%)` }">
@@ -37,8 +37,8 @@ import { ref } from 'vue';
 // Texts to display in the carousel
 const texts = ref([
   { id: 1, title: "Crazy ideas, crazy results that's how we roll at Plateau !", subtitle: "1" },
-  { id: 2, title: "Crazy ideas, crazy results that's how we roll at Plateau !", subtitle: "2" },
-  { id: 3, title: "Crazy ideas, crazy results that's how we roll at Plateau !", subtitle: "3" }
+  { id: 2, title: "Creativity that clicks, results that stick.", subtitle: "2" },
+  { id: 3, title: "Your success is our strategy.", subtitle: "3" }
 ]);
 
 const activeIndex = ref(0);

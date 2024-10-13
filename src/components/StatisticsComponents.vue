@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[url(/src/assets/images/bgNumber.png)] text-white py-12 flex flex-wrap justify-center items-center gap-8">
     <div class="flex flex-col md:flex-row items-center py-8 space-y-8 md:space-y-0 md:space-x-14">
-      <div v-for="(stat, index) in stats" :key="index" class="flex flex-col items-center space-y-2">
+      <div v-for="(stat, index) in stats" :key="index" class="flex flex-col items-center space-y-2" :ref="el => numberElements[index] = el">
         <!-- Incrementing number with text-stroke -->
         <div class="text-5xl md:text-7xl font-bold text-transparent text-stroke flex items-center space-x-1">
           <span>{{ displayedNumbers[index] }}</span>
@@ -11,11 +11,6 @@
 
         <!-- Label under the number -->
         <p class="text-sm md:text-base text-center">{{ stat.label }}</p>
-
-        <!-- Circular dot between items (only shows between items, not after the last one) -->
-        <!-- <div v-if="index < stats.length - 1" class="flex items-center justify-center w-full">
-          <div class="w-3 h-3 bg-white rounded-full mx-6 md:mx-20"></div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -33,6 +28,7 @@ const stats = [
 
 // Create an array to hold the incremented numbers
 const displayedNumbers = ref(stats.map(() => 0));
+const numberElements = ref([]); // Store the refs for each number element
 
 // Function to increment the number gradually
 const incrementNumber = (index, targetValue) => {
@@ -50,10 +46,25 @@ const incrementNumber = (index, targetValue) => {
   }, 50); // Update every 50ms
 };
 
-// Start incrementing numbers when the page loads
+// Intersection Observer callback to start incrementing when visible
+const startIncrementWhenVisible = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = entry.target.getAttribute('data-index');
+      incrementNumber(index, stats[index].value);
+      observer.unobserve(entry.target); // Stop observing once increment starts
+    }
+  });
+};
+
+// Create IntersectionObserver instance
+let observer;
+
 onMounted(() => {
-  stats.forEach((stat, index) => {
-    incrementNumber(index, stat.value);
+  observer = new IntersectionObserver(startIncrementWhenVisible, { threshold: 0.5 }); // Adjust threshold as needed
+  numberElements.value.forEach((el, index) => {
+    el.setAttribute('data-index', index);
+    observer.observe(el); // Start observing each element
   });
 });
 </script>
