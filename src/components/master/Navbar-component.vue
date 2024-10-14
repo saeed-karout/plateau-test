@@ -7,7 +7,7 @@
           <!-- Image Logo -->
           <img class="w-20" src="../../assets/logo.svg" alt="Your Company Logo">
           <!-- Gradient Text Logo -->
-          <span class="md:hidden text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB2952] to-[#0D1438]">
+          <span class=" text-xl font-bold bg-clip-text text-pink">
             PLATEAU
           </span>
         </div>
