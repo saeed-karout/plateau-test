@@ -1,14 +1,14 @@
 <template>
   <div class="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-28">
     <!-- Background Image -->
-    <div class="absolute inset-0 bg-[url('src/assets/bg/bg-carousl-about.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-[url('src/assets/bg/bg-carousl-about.jpg')] loading bg-cover bg-center"></div>
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
     
     <!-- Content -->
     <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl text-center px-4">
       <div class="flex justify-center mb-4">
-        <img src="../../assets/images/title-bg.png" class="w-48 sm:w-72 md:w-96 lg:w-[600px]" alt="Title Background">
+        <img src="../../assets/images/title-bg.png" lazy="loading" class="w-48 sm:w-72 md:w-96 lg:w-[600px]" alt="Title Background">
       </div>
       <div>
         <p class="text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium max-w-xl sm:max-w-2xl">

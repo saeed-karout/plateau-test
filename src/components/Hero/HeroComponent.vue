@@ -2,12 +2,12 @@
     <div class="relative h-screen z-5">
         <!-- الصورة المخصصة لشاشات الكمبيوتر المكتبية والأكبر -->
         <div class="hidden md:block">
-            <img src="/src/assets/bg/bg-hero.png" class="absolute w-full h-full z-0 object-cover" alt="خلفية الكمبيوتر المكتبي">
+            <img src="/src/assets/bg/bg-hero.png" lazy="loading" class="absolute w-full h-full z-0 object-cover" alt="خلفية الكمبيوتر المكتبي">
         </div>
 
         <!-- الصورة المخصصة لشاشات الموبايل والصغيرة -->
         <div class="block md:hidden">
-            <img src="/src/assets/bg/mobile-2.jpg" class="absolute w-full h-full z-0 object-con" alt="خلفية الموبايل">
+            <img src="/src/assets/bg/mobile-2.jpg" lazy="loading" class="absolute w-full h-full z-0 object-con" alt="خلفية الموبايل">
         </div>
 
         <!-- محتويات أخرى يمكن إضافتها هنا -->

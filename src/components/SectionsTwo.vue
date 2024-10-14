@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[url('/src/assets/images/bg-2.png')] bg-cover bg-center bg-[#0D1438] bg-opacity-50 h-[70vh] flex flex-col items-center justify-center px-6 md:px-28">
+    class="bg-[url('/src/assets/images/bg-2.png')] loading bg-cover bg-center bg-[#0D1438] bg-opacity-50 h-[70vh] flex flex-col items-center justify-center px-6 md:px-28">
     
     <div class="flex flex-col md:flex-row flex-wrap justify-around items-center gap-10 lg:gap-20 w-full">
       
