@@ -1,7 +1,7 @@
 <template>
   <div class="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-28">
     <!-- Background Image -->
-    <div class="absolute inset-0 bg-[url('/src/assets/bg/bg-carousl-about.jpg')] lo bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-[url('/src/assets/bg/bg-carousl-about.jpg')] loading bg-cover bg-center"></div>
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
     
