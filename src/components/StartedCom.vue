@@ -4,7 +4,9 @@
     <transition name="fade" mode="out-in">
       <div v-if="showLogo" key="logo" class="flex flex-col items-center">
         <!-- استبدل 'logo.svg' بمسار اللوغو الخاص بك -->
-        <img src="../assets/logo.svg" alt="Logo" class="w-32 h-32 mb-4 animate-pulse">
+        <!-- <img src="../assets/logo.svg" alt="Logo" class="w-32 h-32 mb-4 animate-pulse"> -->
+
+        <CirclePlateau class="w-32 h-32 mb-4 animate-pulse" />
       </div>
       <div v-else-if="showText" key="text" class="text-center">
         <!-- النص الذي يحتوي على رابط الموقع -->
@@ -18,6 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import CirclePlateau from './mix/CirclePlateau.vue';
 
 // تعريف الأحداث المصدرة
 const emit = defineEmits(['finished'])

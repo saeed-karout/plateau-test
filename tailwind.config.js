@@ -12,6 +12,9 @@ export default {
         'secondary': '#324654',
         'white': "#ffffff",
         "pink": "#EB2952",
+        "navyBlue":"#0D1438",
+        "navyBlueLight":"#293056"
+
         // يمكنك إضافة المزيد من الألوان هنا
       },
       fontFamily: {

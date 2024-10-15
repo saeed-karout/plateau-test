@@ -1,7 +1,7 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-// import AboutView from '../views/AboutView.vue' // تأكد من وجود هذا الملف
+import AboutView from '../views/AboutView.vue'
 import OurWorkView from '@/components/our-work/OurWork.vue'
 // import BlogView from '../views/BlogView.vue' // تأكد من إنشاء هذا الملف
 // import ContactView from '../views/ContactView.vue' // تأكد من إنشاء هذا الملف
@@ -12,11 +12,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: AboutView
-  // },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutView
+  },
 
   {
     path: '/our-work',

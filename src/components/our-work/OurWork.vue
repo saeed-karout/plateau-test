@@ -49,7 +49,7 @@ body {
 .sun {
   width: 175px;
   height: 175px;
-  background: radial-gradient(#f5c313, #EB2952);
+  background: radial-gradient(#EB9999, #EB2952);
   box-shadow: 0 0 50px #EB2952;
   border-radius: 50%;
   position: absolute;

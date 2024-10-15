@@ -22,33 +22,7 @@
       BOLG
     </div>
 
-    <!-- أزرار تغيير اللون -->
-    <div class="absolute bottom-10 flex space-x-4 z-20">
-      <button
-        @click="changeColor('rgba(255, 0, 0, 0.3)')"
-        class="px-4 py-2 bg-red-500 text-white rounded"
-      >
-        أحمر
-      </button>
-      <button
-        @click="changeColor('rgba(6, 2, 31, 0.3)')"
-        class="px-4 py-2 bg-[#06021F] text-white rounded"
-      >
-        أزرق
-      </button>
-      <button
-        @click="changeColor('rgba(0, 255, 0, 0.3)')"
-        class="px-4 py-2 bg-green-500 text-white rounded"
-      >
-        أخضر
-      </button>
-      <button
-        @click="changeColor('rgba(255, 255, 0, 0.3)')"
-        class="px-4 py-2 bg-yellow-500 text-white rounded"
-      >
-        أصفر
-      </button>
-    </div>
+   
   </div>
 </template>
 
@@ -57,14 +31,10 @@ export default {
   name: 'BackgroundVideo',
   data() {
     return {
-      overlayColor: 'rgba(0, 0, 0, 0.3)', // اللون الافتراضي للتراكب
+      overlayColor: 'rgba(6, 2, 31, 0.5)', // اللون الافتراضي للتراكب
     };
   },
-  methods: {
-    changeColor(color) {
-      this.overlayColor = color;
-    },
-  },
+
 };
 </script>
 
